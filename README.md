@@ -1,9 +1,9 @@
 # Video-based-Action-Recognition-using-GluonCV
 Requirements:
-Python 3.6
-pip >= 9
-mxnet
-PyTorch - torchvision
+Python 3.6,
+pip >= 9,
+mxnet,
+PyTorch - torchvision,
 GluonCV
 
 Installation steps:
