@@ -2,6 +2,11 @@ Video based Action Recognition using GluonCV:
 
 The computer vision toolkit used for video based action recognition is GluonCV which is based on Apache MXNet. This toolkit provides state-of-the-art pre-trained models for various computer vision tasks such as object detection, segmentation, pose estimation, action recognition, etc. These are lightweight and flexible building blocks that can be customized for common components for model design, training or inference. GluonCV benefits using MXNet that provides high performance C++ implementations of operators leveraged by Gluon. This toolkit can be easily deployed with minimal configuration in different programming languages.
  
-This implementation uses a pre-trained TSN (Temporal Segmentation Network) from gluoncv-model-zoo to classify video frames from UCF101 dataset. This dataset is an action recognition dataset of realistic action videos taken from around 13,320 short Youtube videos consisting for 101 action classes. The pre-trained TSN model, VGG16, is used to predict action from a single videoframe (i.e. image based action recognition) as well as from multiple video frames taken from a video. 
+This implementation uses a pre-trained TSN (Temporal Segmentation Network) from gluoncv-model-zoo to classify video frames from UCF101 dataset. TSN is a framework for multiple video frames recognition in which short snippets from the entire video are used and a preliminary prediction is made on each snippet. Then a consensus among the snippets is derived as a video-level prediction. The UFC101 dataset is an action recognition dataset of realistic action videos taken from around 13,320 short Youtube videos consisting for 101 action classes. The pre-trained TSN model, VGG16, is used to predict action from a single videoframe (i.e. image based action recognition) as well as from multiple video frames taken from a video. 
 
 On implementing the pretrained model on the given dataset, the model predicts the action from single video frame with 99.8% confidence and the action from the video with 97.8% confidence. Thus, this approach increases the prediction accuracy with easy configuration and implementation steps.  
+
+References:
+https://arxiv.org/abs/1907.04433
+https://cv.gluon.ai/index.html
+Wang, L. et al. (2016). Temporal Segment Networks: Towards Good Practices for Deep Action Recognition. In: Leibe, B., Matas, J., Sebe, N., Welling, M. (eds) Computer Vision – ECCV 2016. ECCV 2016. Lecture Notes in Computer Science(), vol 9912. Springer, Cham. https://doi.org/10.1007/978-3-319-46484-8_2
